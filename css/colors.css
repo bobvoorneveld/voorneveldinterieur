@@ -785,4 +785,23 @@ section#projectDescription {
 /* END NEKO CSS FRAMEWORK
 ================================================== */
 
-
+/**** DARK STYLES ***/
+body, hr.lineStar:after, hr.lineX:after, hr.linePlus:after, hr.lineDot:after, hr.lineLines:after, #footerRights,
+#mainHeader, .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus, .color0, .panel, .panel-body{background:#222;}
+body,h1,h2,h3,h4,h5,h6,p {color:#eee;}
+hr, .boxContent, footer, .largeQuote,.nav-tabs, .nav-tabs > li > a,
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus,
+.panel-group .panel-heading + .panel-collapse .panel-body, .panel-default, h2:after, #footerRights
+ {border-color:#333;}
+ .boxTestimonial {background:#333;}
+footer, .largeQuote, .color1, .camera_neko_skin .camera_wrap .camera_pag .camera_pag_ul, .ctaBox.color1, ul.entry-meta li a, .panel-default>.panel-heading {background:#111;}
+.nav-tabs > li > a {border-style: solid;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus, .camera_neko_skin .camera_wrap .camera_pag .camera_pag_ul{border-bottom-color:#222;}
+#mainHeader.fixedHeader, .is-sticky #mainHeader  {background:rgba(35,35,35,0.95);}
+/*** headers***/
+.header3 #preHeader {border-bottom: 1px solid #333; background:#111;}
+.header3 #preHeader .socialNetwork a, .header3 #preHeader .socialNetwork li:last-child a,  .header3 .navbar-default .navbar-nav > li > a {border-color:#333;}
+.header4 .navbar-default .navbar-nav > li > a{border-color:#222;}
+.header4 .navbar-default .navbar-nav > li > a.active, .header4 .navbar-default .navbar-nav>li>a:hover, .header4 .navbar-default .navbar-nav>li.hover>a, .header4 #resMainMenu li.active>a, .header4 .navbar-nav ul, .header4 .nekoMegaMenu
+{background:#333;}
+.header4 .navbar-default .navbar-nav>li>a:hover, .header4 .navbar-default .navbar-nav>li.hover>a, .header4 #resMainMenu li.active>a {border-color:#333 }
