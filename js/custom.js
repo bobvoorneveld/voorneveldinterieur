@@ -1432,20 +1432,11 @@ function initialize(id) {
 	"use strict";
 	var image = 'images/icon-map.png';
 
-	var overlayTitle = 'Agencies';
+	var overlayTitle = 'Ons kantoor';
 
 	var locations = [
-        //point number 1
-        ['Madison Square Garden', '4 Pennsylvania Plaza, New York, NY'],
-
-        //point number 2
-        ['Best town ever', 'Santa Cruz', 36.986021, -122.02216399999998],
-
-        //point number 3
-        ['Located in the Midwestern United States', 'Kansas'],
-
-        //point number 4
-        ['I\'ll definitly be there one day', 'Chicago', 41.8781136, -87.62979819999998]
+        //Address
+        ['Ons kantoor:<br> De Entrepeneur', 'Herestraat 113, Groningen, Nederland'],
         ];
 
         /*** DON'T CHANGE ANYTHING PASSED THIS LINE ***/
@@ -1664,6 +1655,7 @@ for (i = 0; i < locations.length; i++) {
 
 	}
 }
+map.setZoom(map.getZoom()-3);
 }
 
 
