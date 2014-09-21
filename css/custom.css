@@ -36,3 +36,8 @@ a:hover {
 .boxIcon a:hover p{
     color: #777;
 }
+
+.tips i {
+    color: #fff;
+    border-color: #fff;
+}
