@@ -41,3 +41,7 @@ a:hover {
     color: #fff;
     border-color: #fff;
 }
+
+#homeFullScreen {
+    background-image: url('../images/slider/super/supersized-2.jpg');
+}
