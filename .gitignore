@@ -1,47 +1,56 @@
-*.pyc
-*.*~
 .DS_Store
 .idea/
-newrelic.ini
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
 
-# /
-/.ropeproject
-/.pydevproject
-/.project
-/.settings
-/.vimrc
-/nbproject
-/manage.cfg
-/data
+# C extensions
+*.so
 
-# /docs/ser-opensips/
-/docs/ser-opensips/mysql.pass
-/docs/ser-opensips/kamailio-*.cfg
-/docs/ser-opensips/opensips-*.cfg
-/docs/ser-opensips/opensipsctlrc
-/docs/ser-opensips/osipsconsolerc
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# /voipgrid/
-/voipgrid/settings/dev.py
-/voipgrid/settings/production.py
-# /voipgrid/media/audiofiles/
-/voipgrid/media/audiofiles
-# /voipgrid/media/callmenow/
-/voipgrid/media/callmenow/[0-9]*
-# /voipgrid/media/provisioning/firmware/
-/voipgrid/media/provisioning/firmware
-# /voipgrid/media/quotes/pdf_files/
-/voipgrid/media/quotes/pdf_files/
-# /voipgrid/media/products/images/
-/voipgrid/media/products/images/
-# /voipgrid/base/phonenumber/porting/xmlclasses/
-/voipgrid/base/phonenumber/porting/xmlclasses/
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
-# voipgrid/static
-/voipgrid/static/CACHE
-/voipgrid/static/brand
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# vagrant
-/.vagrant
-/.virtual/var/log/django
-/.virtual/var/log/mysql
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/

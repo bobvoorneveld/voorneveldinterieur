@@ -4,8 +4,8 @@ if ( !$_POST ) exit;
 if ( !defined( "PHP_EOL" ) ) define( "PHP_EOL", "\r\n" );
 
 
-$to = "ruurd@voorneveldinterieur.nl";
-$subject = "Bericht vanaf voorneveldinterieur.nl";
+$to = "info@voorneveldbv.nl";
+$subject = "Website contact formulier ";
 
 
 
@@ -18,59 +18,43 @@ foreach ($_POST as $key => $value) {
 // Assign the input values to variables for easy reference
 $name      = @$_POST["name"];
 $email     = @$_POST["email"];
-$phone     = @$_POST["phone"];
+$email     = @$_POST["phone"];
 $message   = @$_POST["comment"];
 $verify    = @$_POST["verify"];
 
 
 // Test input values for errors
 $errors = array();
- //php verif name
+
+//php verif name
 if(isset($_POST["name"])){
- 
+
         if (!$name) {
-            $errors[] = "You must enter a name.";
-        } elseif(strlen($name) < 2)  {
-            $errors[] = "Name must be at least 2 characters.";
+            $errors[] = "Vult u alstublieft een naam in.";
         }
- 
+
 }
-    //php verif email
+//php verif email
 if(isset($_POST["email"])){
     if (!$email) {
-        $errors[] = "You must enter an email.";
-    } else if (!validEmail($email)) {
-        $errors[] = "You must enter a valid email.";
+        $errors[] = "Vult u alstublieft een email adres in.";
     }
 }
-    //php verif phone
-if(isset($_POST["phone"])){
-    if (!$phone) {
-        $errors[] = "You must enter a correct phone number.";
-    }elseif ( !is_numeric( $phone ) ) {
-        $errors[]= 'Your phone number can only contain digits.';
-    }
-}
-
 
 
 //php verif comment
 if(isset($_POST["comment"])){
-    if (strlen($message) < 10) {
-        if (!$message) {
-            $errors[] = "You must enter a message.";
-        } else {
-            $errors[] = "Message must be at least 10 characters.";
-        }
+    if (!$message) {
+        $errors[] = "We zouden graag een vraag of opmerking ontvangen.";
     }
 }
 
-    //php verif captcha
+//php verif captcha
 if(isset($_POST["verify"])){
     if (!$verify) {
-        $errors[] = "You must enter the security code";
+        $errors[] = "Om spam te voorkomen, vult u de beveilging in?";
     } else if (md5($verify) != $_SESSION['nekoCheck']['verify']) {
-        $errors[] = "The security code you entered is incorrect ";
+        $errors[] = "De beveiliging is helaas incorrect ";
     }
 }
 
@@ -81,7 +65,7 @@ if ($errors) {
         $errortext .= '<li>'. $error . "</li>";
     }
 
-    echo '<div class="alert alert-danger">The following errors occured:<br><ul>'. $errortext .'</ul></div>';
+    echo '<div class="alert alert-danger">De volgende zaken gingen net niet goed:<br><ul>'. $errortext .'</ul></div>';
 
 }else{
 
@@ -94,13 +78,11 @@ if ($errors) {
     $headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
     $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
-    $mailBody  = "You have been contacted by $name" . PHP_EOL . PHP_EOL;
-    $mailBody .= (!empty($company))?'Company: '. PHP_EOL.$company. PHP_EOL . PHP_EOL:'';
-    $mailBody .= (!empty($quoteType))?'project Type: '. PHP_EOL.$quoteType. PHP_EOL . PHP_EOL:''; 
-    $mailBody .= "Message :" . PHP_EOL;
+    $mailBody  = "Er is een mail vanaf de site verstuurd door: $name" . PHP_EOL . PHP_EOL;
+    $mailBody .= "Email adres van $name is: $email.";
+    $mailBody .= "Telefoonnummer van $name is: $phone.";
+    $mailBody .= "Bericht:" . PHP_EOL;
     $mailBody .= $message . PHP_EOL . PHP_EOL;
-    $mailBody .= "You can contact $name via email, $email.";
-    $mailBody .= (isset($phone) && !empty($phone))?" Or via phone $phone." . PHP_EOL . PHP_EOL:'';
     $mailBody .= "-------------------------------------------------------------------------------------------" . PHP_EOL;
 
 
@@ -109,11 +91,11 @@ if ($errors) {
 
 
     if(mail($to, $subject, $mailBody, $headers)){
-        echo '<div class="alert alert-success">Success! Your message has been sent.</div>';
+        echo '<div class="alert alert-success">Succes! Uw bericht is verstuurd.</div>';
     }
 }
 
-// FUNCTIONS 
+// FUNCTIONS
 function validEmail($email) {
     $isValid = true;
     $atIndex = strrpos($email, "@");
@@ -149,7 +131,7 @@ function validEmail($email) {
                 $isValid = false;
             }
         }
-        
+
         if(function_exists('checkdnsrr')){
 	        if ($isValid && !(checkdnsrr($domain, "MX") || checkdnsrr($domain, "A"))) {
 	            // domain not found in DNS
