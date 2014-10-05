@@ -66,11 +66,11 @@
 						<div class="col-xs-6">
 							<div id="contactBloc" class="clearfix">
 								<!-- social icons -->
-								<ul class="socialNetwork">
+								<!-- <ul class="socialNetwork">
                                     <li><a href="https://www.facebook.com/VoorneveldBV" class="tips" title="volg ons op Facebook"><i class="icon-facebook-1"></i></a></li>
                                     <li><a href="https://twitter.com/Voorneveldbv" class="tips" title="volg ons op Twitter"><i class="icon-twitter-bird"></i></a></li>
                                     <li><a href="http://www.linkedin.com/company/voorneveldbv" class="tips" title="volg ons op Linkedin"><i class="icon-linkedin-1"></i></a></li>
-								</ul>
+								</ul> -->
                                 <!-- social icons -->
 								<!-- phone -->
 								<span class="contactPhone"><i class="icon-mobile"></i>050 535 0 555</span>
@@ -100,30 +100,41 @@
 							<ul class="nav navbar-nav pull-right">
 
 								<li class="primary">
-									<a href="index.html" class="firstLevel" >Home</a>
+									<a href="index.html" class="firstLevel scrollLink">Home</a>
 								</li>
 
 								<li class="sep"></li>
 
 								<li >
-									<a href="portfolio.html" class="firstLevel">Portfolio</a>
+									<a href="index.html#paralaxSlice1" class="firstLevel scrollLink">Portfolio</a>
 								</li>
 
+                                <li class="sep"></li>
+
+                                <li >
+                                    <a href="index.html#about" class="firstLevel scrollLink">Over ons</a>
+                                </li>
 								<li class="sep"></li>
 
 								<li >
-									<a href="winkel-analyse.html" class="firstLevel">Winkel analyse</a>
+									<a href="index.html#winkelanalyse" class="firstLevel scrollLink">Winkelanalyse</a>
 								</li>
+
+                                <li class="sep"></li>
+
+                                <li >
+                                    <a href="index.html#team" class="firstLevel scrollLink">Het team</a>
+                                </li>
 
 								<li class="sep"></li>
 
                                 <li >
-									<a href="clicks-bricks.html" class="firstLevel">Clicks & bricks</a>
+									<a href="index.html#clicks-bricks" class="firstLevel scrollLink">Clicks &amp; bricks</a>
 								</li>
 
 								<li class="sep"></li>
 
-								<li id="lastMenu" class="last"><a href="contact.html" class="firstLevel last active">Contact</a></li>
+								<li id="lastMenu" class="last"><a href="contact.html" class="firstLevel last">Contact</a></li>
 							</ul>
 							<!-- End main navigation -->
 						</div>
@@ -148,7 +159,7 @@
 				<div class="container">
 
 					<div class="row">
-						<div class="col-sm-2">
+						<div class="col-sm-3">
 							<h4>Addres:</h4>
                             <address>
                                 <p> <i class="icon-location"></i>&nbsp;Herestraat 113<br>
@@ -161,7 +172,7 @@
                             </address>
 						</div>
 						<form method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler.php" id="contactfrm" role="form">
-							<div class="col-sm-4">
+							<div class="col-sm-3">
 								<div class="form-group">
 									<label for="name">Naam</label>
 									<input type="text" class="form-control" name="naam" id="name" placeholder="Vult u uw naam hier in?"  title="Vult u uw naam hier in?"/>
@@ -170,21 +181,25 @@
 									<label for="email">Email</label>
 									<input type="email" class="form-control" name="email" id="email" placeholder="Vult u uw email adres hier in?" title="Vult u uw email adres hier in?"/>
 								</div>
+								<div class="form-group">
+									<label for="phone">Telefoonnummer</label>
+									<input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Telefoonnummer" title="Vult u hier uwtelefoonnummer in?">
+								</div>
 							</div>
 							<div class="col-sm-6">
 								<div class="form-group">
 									<label for="comments">Uw vraag/opmerkingen</label>
-									<textarea name="comment" class="form-control" id="comments" cols="3" rows="10" placeholder="Vult u uw vragen en opmerkingen in?" title="Vult u uw vragen en opmerkingen in?"></textarea>
+									<textarea name="comment" class="form-control" id="comments" cols="3" rows="20" placeholder="Vult u uw vragen en opmerkingen in?" title="Vult u uw vragen en opmerkingen in?"></textarea>
 								</div>
 								<fieldset class="clearfix securityCheck">
-									<h3>Beveiligingsvraag</h3>
+									<label for="verify">Beveiligingsvraag</label>
 									<div class="form-group">
 										<img src="js-plugin/neko-contact-ajax-plugin/php/image.php" alt="Image verification"/>
 										<input class="required form-control"  id="verify" name="verify" type="text" >
 									</div>
 								</fieldset>
 							</div>
-							<div class="col-md-8 col-md-offset-5">
+							<div class="col-md-6 col-md-offset-3">
 								<div class="result"></div>
 								<button name="submit" type="submit" class="btn btn-lg" id="submit"> Verzenden</button>
 							</div>
@@ -203,11 +218,11 @@
                     <div class="row">
 
                         <div class="col-md-12">
-                            <ul class="socialNetwork">
+                            <!-- <ul class="socialNetwork">
                                 <li><a href="https://www.facebook.com/VoorneveldBV" class="tips" title="volg ons op Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
                                 <li><a href="https://twitter.com/Voorneveldbv" class="tips" title="volg ons opn Twitter"><i class="icon-twitter-bird iconRounded"></i></a></li>
                                 <li><a href="http://www.linkedin.com/company/voorneveldbv" class="tips" title="volg ons op Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
-                            </ul>
+                            </ul> -->
                         </div>
 
 

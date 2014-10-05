@@ -18,6 +18,7 @@ foreach ($_POST as $key => $value) {
 // Assign the input values to variables for easy reference
 $name      = @$_POST["name"];
 $email     = @$_POST["email"];
+$email     = @$_POST["phone"];
 $message   = @$_POST["comment"];
 $verify    = @$_POST["verify"];
 
@@ -78,9 +79,10 @@ if ($errors) {
     $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
     $mailBody  = "Er is een mail vanaf de site verstuurd door: $name" . PHP_EOL . PHP_EOL;
-    $mailBody .= "Message :" . PHP_EOL;
-    $mailBody .= $message . PHP_EOL . PHP_EOL;
     $mailBody .= "Email adres van $name is: $email.";
+    $mailBody .= "Telefoonnummer van $name is: $phone.";
+    $mailBody .= "Bericht:" . PHP_EOL;
+    $mailBody .= $message . PHP_EOL . PHP_EOL;
     $mailBody .= "-------------------------------------------------------------------------------------------" . PHP_EOL;
 
 

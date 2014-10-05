@@ -45,3 +45,7 @@ a:hover {
 #homeFullScreen {
     background-image: url('../images/slider/super/supersized-2.jpg');
 }
+
+textarea#comments {
+    height: 150px;
+}
